@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+    <!--Font-->
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
     <!--Bootstrap JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -22,23 +25,27 @@
 <body>
     <div class="container">
 
-        <h1 class="text-center">Trivia Game</h1>
+        <h1 class="text-center name">Trivia Game</h1>
 
          <h1 id="timer-first" class="text-center"></h1>
 
-        <div class="container text-center" id="container-start">
-            <button class="btn btn-primary" id="btn-start">Start</button>
-        </div>
-
-        <div class="container text-center" id="div-btnQuest">
-            <div class="container" id="container-quest"></div>   
+        <div class="text-center" id="div-btnQuest">
+            <div id="container-quest"></div>   
         <button type='submit' id='btn-submit'>Submit</button>  
         </div>
 
-        <div class="container text-center" id="container-result">
+        <div class="row text-center">
+            <div class="col-md-12" id="container-result">
             <h2>Done!!</h2>
+            </div>
         </div>
         <button class="btn btn-primary" id="btn-again">Start Again!</button>
+
+        <div class="row" id="container-start">
+         <div class="col-md-12 text-center text-footer">
+            <button class="btn btn-outline-warning btn-lg btn-block" id="btn-start">Start</button>
+        </div>
+        </div>
     </div>
     
 </body>

@@ -40,6 +40,7 @@ contStart.hide();
 var value=4;
 var interval=setInterval(function(){
 	value--;
+
     $('#timer-first').text(value);
     if (value === 0)
     { 
@@ -59,13 +60,13 @@ var interval=setInterval(function(){
        	 	
        	 }
        }, 1000);
-       
+   
    }
 
  }, 1000);
 });
 
-
+//function get the result
 function RenderContAns(){
 	var coA="<p> Correct Answer: "+correct+"</p>";
     var incA="<p> Incorrect Answer: "+incorrect+"</p>";
@@ -76,6 +77,7 @@ function RenderContAns(){
     $('#timer-first').text("");
 }
 
+//button reset game
 btnAgain.on('click', function(){
 	correctAns="";
 	correct=0;
@@ -131,16 +133,16 @@ function RenderHtML(data){
     	arrResp.sort();
       console.log(correctAns);
     	$.each(arrResp, function (index,valor){
-    	   	htmlString += '<input type="radio" name="contact" value='+ valor +'>' + valor + '</input>';
+    	   	htmlString += '<input type="radio" name="contact" value="'+ valor +'">' + valor + '</input>';
     		});
     }
 
     htmlString +="<hr>";
 	contQuest.append(htmlString);
-    //console.log(correctAns);
+   
 }
 
-
+//button test if the answers are ok
 $("#btn-submit").on("click", function(){
 	//debugger;
 	 var inp=$("input[name='contact']:checked"). val();

@@ -1,0 +1,39 @@
+body{
+
+  background-image: url("../images/trviacrack.png");
+ /*font-family: 'Lobster', cursive;*/
+  background-position: center center;
+  background-repeat:no-repeat;
+  background-color:#111;
+  background-attachment:fixed;
+  background-size:cover;
+  font-weight: bold!important;
+  /*color: white;*/
+}
+
+.name{
+	font-size: 86px;
+	font-family: 'Anton', sans-serif;
+	/*color: white;*/
+}
+
+#btn-start{
+	color: white;
+	font-weight: bold!important;
+	width: 100%!important;
+}
+
+
+
+.text-footer{
+	position: fixed;
+    bottom: 20px;
+    width: 90%
+
+}
+
+.timerFirt{
+	font-size: 96px;
+	color: 
+}
+
