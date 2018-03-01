@@ -16,7 +16,7 @@
 
     <!--Bootstrap JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
     
@@ -27,11 +27,11 @@
 
         <h1 class="text-center name">Trivia Game</h1>
 
-         <h1 id="timer-first" class="text-center"></h1>
+         <h1 id="timer-first" class="text-center timerFirt"></h1>
 
         <div class="text-center" id="div-btnQuest">
             <div id="container-quest"></div>   
-        <button type='submit' id='btn-submit'>Submit</button>  
+        <button type='submit' id='btn-submit' class="btn btn-success btn-lg" style="position: fixed; top: 50%; left: 46%;">SUBMIT</button>  
         </div>
 
         <div class="row text-center">
@@ -39,15 +39,17 @@
             <h2>Done!!</h2>
             </div>
         </div>
-        <button class="btn btn-primary" id="btn-again">Start Again!</button>
-
-        <div class="row" id="container-start">
-         <div class="col-md-12 text-center text-footer">
-            <button class="btn btn-outline-warning btn-lg btn-block" id="btn-start">Start</button>
+        <button class="btn btn-danger btn-lg" id="btn-again">TRY AGAIN!!!</button>
+</div>
+<div class="container-fluid">
+        <div class="row text-footer" id="container-start">
+            
+         <div class="col-md-12">
+            <button class="btn btn-warning btn-lg" id="btn-start">START</button>
         </div>
-        </div>
-    </div>
+         </div>
     
+   </div> 
 </body>
 
 </html>

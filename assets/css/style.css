@@ -8,19 +8,20 @@ body{
   background-attachment:fixed;
   background-size:cover;
   font-weight: bold!important;
-  /*color: white;*/
+  color: white;
 }
 
 .name{
 	font-size: 86px;
 	font-family: 'Anton', sans-serif;
-	/*color: white;*/
+	color: #ffc107;
+	background-color: white;
 }
 
 #btn-start{
 	color: white;
 	font-weight: bold!important;
-	width: 100%!important;
+	width: 100%!important;*/
 }
 
 
@@ -28,12 +29,24 @@ body{
 .text-footer{
 	position: fixed;
     bottom: 20px;
-    width: 90%
+   width: 100%
 
 }
 
 .timerFirt{
-	font-size: 96px;
-	color: 
+	font-size: 170px;
+	color: red;
+	margin-top: 83px;
 }
 
+.timerSecond{
+	text-align: right !important;
+	margin-top: 15px;
+}
+
+/*#div-btnQuest,#container-result{
+	margin-top: 40px;
+}*/
+
+
+          

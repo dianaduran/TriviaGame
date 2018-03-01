@@ -19,49 +19,36 @@ btnAgain.hide();
 
 
 
-// 	var queryURL = 'https://opentdb.com/api.php?amount=1&difficulty=medium&type=multiple';
-
-//     $.ajax({
-//                 url: queryURL,
-//                 method: "GET"
-//             }).then(function(response) {
-//                 console.log(response);
-        
-    
-// });
-
-
-
-       
-
 //start the game
 $("#btn-start").on('click', function(){
 contStart.hide();
 var value=4;
 var interval=setInterval(function(){
 	value--;
-
+    $("#timer-first").addClass("timerFirt");
     $('#timer-first').text(value);
     if (value === 0)
     { 
-    	//debugger;
+     $('#timer-first').text("");
 	   clearInterval(interval);
+     $("#timer-first").removeClass("timerFirt");
+     $("#timer-first").addClass("timerSecond");
+     $('#timer-first').text('0 : 30');
 	   Request(); 
 	   value=31;
 	   var int2=setInterval(function(){
-	   	value--;
-	    $('#timer-first').text('0 : '+value);
-	       	 divBtn.show();
-       	 if(value == 0)
-       	 {
-       	 	divBtn.hide();
+	   	
+        value--;
+        $('#timer-first').text('0 : '+value);
+  	    divBtn.show();
+        if(value == 0)
+        {
+        	divBtn.hide();
        	 	clearInterval(int2);
        	 	RenderContAns();
-       	 	
-       	 }
+        }
        }, 1000);
-   
-   }
+    }
 
  }, 1000);
 });
@@ -79,15 +66,16 @@ function RenderContAns(){
 
 //button reset game
 btnAgain.on('click', function(){
-	correctAns="";
-	correct=0;
-	incorrect=0;
-	noAns=0;
-	contResult.hide();
+  	correctAns="";
+  	correct=0;
+  	incorrect=0;
+  	noAns=0;
+  	contResult.hide();
     divBtn.hide();
     contStart.show();
     contQuest.empty();
     contResult.empty();
+    $("#timer-first").removeClass("timerSecond");
     $('#timer-first').text("");
     btnAgain.hide();
 
@@ -106,9 +94,6 @@ ourRequest.onload = function(){
  RenderHtML(ourData.results);
   };
  	ourRequest.send();
-	if(divBtn.css('display') == 'none'){
-	divBtn.show();
-     }
 }
 
 //Fill html
@@ -133,6 +118,7 @@ function RenderHtML(data){
     	arrResp.sort();
       console.log(correctAns);
     	$.each(arrResp, function (index,valor){
+         
     	   	htmlString += '<input type="radio" name="contact" value="'+ valor +'">' + valor + '</input>';
     		});
     }
