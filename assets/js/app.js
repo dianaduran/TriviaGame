@@ -31,6 +31,8 @@ var interval=setInterval(function(){
     { 
      $('#timer-first').text("");
 	   clearInterval(interval);
+     $('body').removeClass("bodyClass");
+     $('body').addClass("startGame");
      $("#timer-first").removeClass("timerFirt");
      $("#timer-first").addClass("timerSecond");
      $('#timer-first').text('0 : 30');
@@ -77,6 +79,8 @@ btnAgain.on('click', function(){
     contResult.empty();
     $("#timer-first").removeClass("timerSecond");
     $('#timer-first').text("");
+    $('body').removeClass("startGame");
+    $('body').addClass("bodyClass");
     btnAgain.hide();
 
 })
@@ -118,7 +122,7 @@ function RenderHtML(data){
     	arrResp.sort();
       console.log(correctAns);
     	$.each(arrResp, function (index,valor){
-         
+          
     	   	htmlString += '<input type="radio" name="contact" value="'+ valor +'">' + valor + '</input>';
     		});
     }
@@ -130,25 +134,20 @@ function RenderHtML(data){
 
 //button test if the answers are ok
 $("#btn-submit").on("click", function(){
-	//debugger;
-	 var inp=$("input[name='contact']:checked"). val();
-    console.log(inp);
+	
 	 if(!$("input[name='contact']").is(":checked"))
 		  {
 		  	noAns++;
 		    console.log(noAns);
 		  }
-   
-
-	 if ($("input[value ='"+ correctAns +"']").is(":checked")) 
+	else if ($("input[value ='"+ correctAns +"']").is(":checked")) 
 		  {
-		          correct++;
-		          console.log(correct);
+		     correct++;
+		     console.log(correct);
 		    }
-	 if (!$("input[value ='"+ correctAns +"']").is(":checked"))
-		   {	
-		   
-		   	incorrect++;
+	 else  
+     {	
+		  	incorrect++;
 		    console.log(incorrect);
 		    }
 	 
@@ -157,8 +156,4 @@ $("#btn-submit").on("click", function(){
 
 });
 
-
-
-
-
- });
+});

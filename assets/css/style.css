@@ -1,21 +1,27 @@
 body{
 
-  background-image: url("../images/trviacrack.png");
- /*font-family: 'Lobster', cursive;*/
   background-position: center center;
   background-repeat:no-repeat;
   background-color:#111;
   background-attachment:fixed;
   background-size:cover;
-  font-weight: bold!important;
   color: white;
+}
+
+.bodyClass{
+	 background-image: url("../images/trviacrack.png");
+}
+
+.startGame{
+	 background-image: url("../images/start.png");
 }
 
 .name{
 	font-size: 86px;
-	font-family: 'Anton', sans-serif;
+	/*font-family: 'Anton', sans-serif;*/
 	color: #ffc107;
 	background-color: white;
+	font-weight: bold!important;
 }
 
 #btn-start{
@@ -37,6 +43,8 @@ body{
 	font-size: 170px;
 	color: red;
 	margin-top: 83px;
+	font-family: 'Permanent Marker', cursive;
+	font-weight: bold!important;
 }
 
 .timerSecond{
@@ -44,9 +52,28 @@ body{
 	margin-top: 15px;
 }
 
-/*#div-btnQuest,#container-result{
-	margin-top: 40px;
-}*/
+
+input[type=radio]{
+  display: inline;
+  position: relative;
+  font-weight: 300;
+  font-size: 1.35em;
+  padding: 25px 25px 25px 80px;
+  margin: 10px 4px;
+  z-index: 9;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+  
+}
+
+input[type=radio]:hover{
+	color: black;
+}
+
+button{
+	 font-family: 'Permanent Marker', cursive;
+}
+
 
 
           

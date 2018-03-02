@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!--Font-->
-    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Anton|Permanent+Marker" rel="stylesheet">
 
     <!--Bootstrap JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -22,7 +22,7 @@
     
 </head>
 
-<body>
+<body class="bodyClass">
     <div class="container">
 
         <h1 class="text-center name">Trivia Game</h1>
@@ -30,24 +30,26 @@
          <h1 id="timer-first" class="text-center timerFirt"></h1>
 
         <div class="text-center" id="div-btnQuest">
-            <div id="container-quest"></div>   
-        <button type='submit' id='btn-submit' class="btn btn-success btn-lg" style="position: fixed; top: 50%; left: 46%;">SUBMIT</button>  
+            <div id="container-quest" class="">
+            </div>   
+        <button type='submit' id='btn-submit' class="btn btn-success btn-lg" style="position: fixed; top: 90%; left: 46%;">SUBMIT</button>  
         </div>
 
         <div class="row text-center">
             <div class="col-md-12" id="container-result">
             <h2>Done!!</h2>
+            <button class="btn btn-danger btn-lg" id="btn-again">TRY AGAIN!!!</button>
             </div>
+          
         </div>
-        <button class="btn btn-danger btn-lg" id="btn-again">TRY AGAIN!!!</button>
+        
 </div>
 <div class="container-fluid">
         <div class="row text-footer" id="container-start">
-            
-         <div class="col-md-12">
+          <div class="col-md-12">
             <button class="btn btn-warning btn-lg" id="btn-start">START</button>
+          </div>
         </div>
-         </div>
     
    </div> 
 </body>
