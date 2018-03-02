@@ -55,7 +55,7 @@ body{
 
 input[type=radio]{
   display: inline;
-  position: relative;
+  position: initial;
   font-weight: 300;
   font-size: 1.35em;
   padding: 25px 25px 25px 80px;
