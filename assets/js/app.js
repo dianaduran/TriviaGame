@@ -12,6 +12,7 @@ var correctAns="";
 var correct=0;
 var incorrect=0;
 var noAns=0;
+var contQ=0;
 
 contResult.hide();
 divBtn.hide();
@@ -60,7 +61,8 @@ function RenderContAns(){
 	var coA="<p> Correct Answer: "+correct+"</p>";
     var incA="<p> Incorrect Answer: "+incorrect+"</p>";
     var noA="<p> Unanswered: "+noAns+"</p>";
-    contResult.append(coA,incA,noA);
+    var ask="<p> Total Questions: "+contQ+"</p>";
+    contResult.append(coA,incA,noA, ask);
     contResult.show();
     btnAgain.show();
     $('#timer-first').text("");
@@ -93,8 +95,7 @@ ourRequest.open('GET','https://opentdb.com/api.php?amount=1&difficulty=medium&ty
 ourRequest.onload = function(){
  
  var ourData = JSON.parse(ourRequest.responseText);
- 
- //console.log(ourData.results);
+  //console.log(ourData.results);
  RenderHtML(ourData.results);
   };
  	ourRequest.send();
@@ -105,8 +106,7 @@ function RenderHtML(data){
 	var htmlString = '';
 	var arrResp=[];
 	
-     
-    for( var i=0;i<data.length;i++)
+   for( var i=0;i<data.length;i++)
     {
     	arrResp=[];
     	htmlString += "<h3>" + data[i].question + "</h3>";
@@ -134,7 +134,7 @@ function RenderHtML(data){
 
 //button test if the answers are ok
 $("#btn-submit").on("click", function(){
-	
+	 contQ++; 
 	 if(!$("input[name='contact']").is(":checked"))
 		  {
 		  	noAns++;
