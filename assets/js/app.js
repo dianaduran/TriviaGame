@@ -123,7 +123,7 @@ function RenderHtML(data){
       console.log(correctAns);
     	$.each(arrResp, function (index,valor){
           
-    	   	htmlString += '<input type="radio" name="contact" value="'+ valor +'">' + valor + '</input>';
+    	   	htmlString += '<input type="radio" name="contact" id="f-option" value="'+ valor +'"><label for="f-option">'+ valor +'</label>';
     		});
     }
 

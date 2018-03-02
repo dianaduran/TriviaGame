@@ -66,6 +66,18 @@ input[type=radio]{
   
 }
 
+label{
+  display: inline;
+  position: relative;
+  font-weight: 300;
+  font-size: 1.35em;
+
+  margin: 10px 24px auto 0px;
+  height: 30px;
+  z-index: 9;
+
+}
+
 input[type=radio]:hover{
 	color: black;
 }
